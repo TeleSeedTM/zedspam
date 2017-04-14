@@ -36,7 +36,7 @@ if ($new_chat_member_id != '') {
   } else {
     $members = getChatMembersCount($chat_id,$token);
     if ($members < 100) {
-      $welcome_massage = 'ممنون که من رو به گروه دعوت کردید';
+      $welcome_massage = 'مرسی از دعوتت دوست عزیزم';
       send_group_message($chat_id,$token,$welcome_massage);
       $admins = getChatAdministrators  ($chat_id,$token);
       if (is_array($admins)) {
@@ -158,7 +158,7 @@ if($text == "/start"){
         'reply_markup'=>json_encode([
             'inline_keyboard'=>[
                 [
-                    ['text'=>"سازنده من😊",'url'=>"https://telegram.me/aliesmaieli"],['text'=>"کانال من😎",'url'=>"https://telegram.me/tikapp"]
+                    ['text'=>"سازنده من😊",'url'=>"https://telegram.me/TeleSeedAmin"],['text'=>"کانال من😎",'url'=>"https://telegram.me/TeleSeedTM"]
                 ]
             ]
         ])
@@ -167,7 +167,7 @@ if($text == "/start"){
 elseif(preg_match('/^\/([Oo]therbot)/',$textmessage)){
         ali("forwardmessage", [
                 'chat_id' => $chat_id,
-                'from_chat_id' => "@tikapp",
+                'from_chat_id' => "@TeleSeedTM",
                 'message_id' => 12
             ]);
         }
